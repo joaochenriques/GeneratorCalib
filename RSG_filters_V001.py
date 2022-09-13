@@ -148,7 +148,7 @@ def filters_sym_6th( pnts_seq ):
     hpts = Npts / 2
 
     if Npts % 2 == 0:
-      print ' Number of points should be an odd ', Npts
+      print( ' Number of points should be an odd ', Npts )
       exit(1)
 
     CONST6_0 = (   1225.E0*float_Npts**6 -  57575.E0*float_Npts**4 +  \
@@ -246,14 +246,14 @@ def filters_SG2( pnts_seq, degree ):
     b = zeros( Npts )
     b[M+1] = 1
     q = linspace(-M,M,Npts)
-    #~ print len(b), len(q)
+    #~ print( len(b), len(q) )
 
     a = polyfit(q, b,degree);
 
     h = polyval(a,q)
 
     if Npts % 2 == 0:
-      print ' Number of points should be an odd ', Npts
+      print( ' Number of points should be an odd ', Npts )
       exit(1)
 
     b_lst.append( h )
